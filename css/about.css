@@ -1,0 +1,270 @@
+/* Global Styles */
+body {
+    font-family: 'Nunito', sans-serif; /* Using Google font for a clean and modern look */
+    margin: 0; /* No margins around the page */
+    padding: 0; /* No padding around the page */
+    background-color: #f9f9f9; /* Light gray background color, easy on the eyes */
+    color: #333; /* Dark gray text color, pretty standard */
+}
+
+.container {
+    width: 90%; /* Container takes up 90% of the width of the screen */
+    max-width: 1200px; /* But maxes out at 1200px, so it doesn’t get too wide */
+    margin: 0 auto; /* Centers the container */
+    padding: 20px; /* Adds some space inside the container */
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px; /* Plenty of padding around the content */
+    background: linear-gradient(135deg, #00bfa6 0%, #007bff 100%); /* Fancy gradient background */
+    text-align: center; /* Center-aligns the text */
+}
+
+.about-section h2 {
+    font-size: 36px; /* Big header text */
+    margin-bottom: 20px; /* Some space below the header */
+    color: #FFF; /* White text for readability against the gradient */
+}
+
+.about-section p {
+    font-size: 18px; /* Decent-sized text for the paragraph */
+    line-height: 1.6; /* Makes the lines nicely spaced */
+    color: #FFF; /* White text for readability */
+}
+
+/* Team Section */
+.team-section {
+    padding: 50px 20px; /* Padding around the section */
+    background-color: #f1f1f1; /* Light gray background to differentiate this section */
+    text-align: center; /* Center-aligns the text */
+}
+
+.team-section h2 {
+    font-size: 36px; /* Big header text for the team section */
+    margin-bottom: 40px; /* Extra space below the header */
+    color: #007B8F; /* Blue text color, matching the brand */
+}
+
+.team-cards {
+    display: flex; /* Flexbox for easy alignment */
+    justify-content: space-around; /* Space out the team cards evenly */
+    flex-wrap: wrap; /* Wraps the cards if they don't fit in one row */
+    gap: 20px; /* Space between the cards */
+}
+
+.team-card {
+    background-color: #fff; /* White background for the cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a bit of depth */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center-aligns the content */
+    flex: 1; /* Flex grow so cards can take up available space */
+    max-width: 300px; /* Cards won’t get too wide */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.team-card img {
+    width: 100%; /* Images take up the full width of the card */
+    height: auto; /* Keeps the aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.team-card h3 {
+    font-size: 24px; /* Medium-sized text for the names */
+    margin-bottom: 10px; /* Space below the name */
+    color: #333; /* Dark gray text, standard */
+}
+
+.team-card p {
+    font-size: 16px; /* Smaller text for the description */
+    color: #777; /* Lighter gray text */
+}
+
+.team-card:hover {
+    transform: translateY(-10px); /* Lifts the card up when hovered */
+}
+
+/* Curious Section */
+.curious-section {
+    padding: 60px 20px; /* Padding around the section */
+    background-color: #007B8F; /* Blue background for a strong visual impact */
+    color: white; /* White text color */
+    text-align: center; /* Center-aligns the text */
+}
+
+.curious-section h2 {
+    font-size: 36px; /* Big header text */
+    margin-bottom: 40px; /* Lots of space below the header */
+    color: #007B8F; /* Blue color, consistent with brand */
+}
+
+/* Timeline (or Slider) styles go here */
+/* This area is ready for custom styles based on your choice of timeline or slider */
+
+/* Book Now Section */
+.book-now-section {
+    padding: 50px 20px; /* Padding around the section */
+    background: linear-gradient(135deg, #00bfa6 0%, #007bff 100%); /* Another fancy gradient background */
+    text-align: center; /* Center-aligns the text */
+}
+
+.book-now-section .button {
+    background-color: #00bfa6; /* Teal background for the button */
+    color: white; /* White text color */
+    padding: 15px 30px; /* Padding inside the button */
+    font-size: 18px; /* Decent size for the button text */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.book-now-section .button:hover {
+    background-color: #008f7a; /* Darker teal when hovered */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center-aligns the cards */
+    }
+
+    .team-card {
+        max-width: 90%; /* Make the cards wider on smaller screens */
+        margin-bottom: 20px; /* Space below each card */
+    }
+
+    .curious-section h2 {
+        font-size: 28px; /* Smaller header on small screens */
+    }
+
+    .about-section h2,
+    .team-section h2 {
+        font-size: 30px; /* Smaller headers on small screens */
+    }
+}
+
+h2 {
+    text-align: center; /* Center-aligns all h2 elements */
+    font-size: 2.5rem; /* Big header text */
+    color: #007B8F; /* Blue color consistent with brand */
+    margin-bottom: 40px; /* Space below each h2 */
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative; /* Relative positioning to place the timeline elements */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    list-style: none; /* Removes default bullet points */
+}
+
+.timeline-item {
+    position: relative; /* Positions the timeline items relative to the timeline */
+    margin: 50px 0; /* Space above and below each item */
+}
+
+.timeline-item::before {
+    content: attr(data-year); /* Displays the year as a content */
+    position: absolute;
+    left: 50%; /* Centers the year on the timeline */
+    transform: translateX(-50%); /* Perfectly centers the year */
+    background: #007B8F; /* Blue background for the year label */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding inside the year label */
+    border-radius: 50%; /* Circular year label */
+    font-size: 1.2rem; /* Medium font size */
+    font-weight: bold; /* Bold text */
+    z-index: 1; /* Puts the year label above other elements */
+    transition: background-color 0.3s ease; /* Smooth color change on hover */
+}
+
+.timeline-item .timeline-content {
+    position: relative; /* Positions the content relative to the timeline */
+    background: #007B8F; /* Blue background for the content */
+    padding: 20px 30px; /* Padding inside the content */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 500px; /* Content won't get too wide */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2; /* Content sits above other elements */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animations for position and visibility */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Slightly off the screen initially */
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto; /* Aligns odd items to the left */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto; /* Aligns even items to the right */
+}
+
+.timeline-item.is-visible .timeline-content {
+    transform: translateY(0); /* Brings the content into view */
+    opacity: 1; /* Makes the content visible */
+}
+
+.timeline-item.is-visible::before {
+    background-color: #FFD700; /* Gold color when item becomes visible */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning, so it stays in place */
+    z-index: 1000; /* Above everything else */
+    left: 0; /* Full-width on the left */
+    top: 0; /* Full-height on the top */
+    width: 100%; /* Takes up the entire width */
+    height: 100%; /* Takes up the entire height */
+    overflow: auto; /* Scroll if content is too tall */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    display: flex; /* Flexbox for easy centering */
+}
+
+.modal-content {
+    background-color: #fff; /* White background for the modal */
+    padding: 20px; /* Padding inside the modal */
+    border: 1px solid #888; /* Subtle border */
+    width: 80%; /* Takes up 80% of the width */
+    max-width: 600px; /* Max width, so it doesn't get too big */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center-aligns the content */
+    z-index: 3000; /* Content above everything else */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a nice shadow */
+}
+
+.modal-image {
+    width: 150px; /* Size of the image */
+    height: 150px; /* Keeps it square */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.close {
+    color: #aaa; /* Light gray color for the close button */
+    float: right; /* Positions it to the right */
+    font-size: 28px; /* Large text */
+    font-weight: bold; /* Bold text */
+}
+
+.close:hover,
+.close:focus {
+    color: #000; /* Darker color when hovered or focused */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.linkedin-icon {
+    width: 20px; /* Size of the LinkedIn icon */
+    margin-right: 5px; /* Space to the right of the icon */
+    vertical-align: middle; /* Aligns the icon with the text */
+}

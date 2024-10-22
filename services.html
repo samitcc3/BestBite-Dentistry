@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Built Dentistry Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfb;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #007B8F;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .navbar .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-menu a:hover {
+            color: #FFD700;
+        }
+
+        .services-section {
+            padding: 40px 20px;
+            background-color: #fafafa;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #007B8F;
+        }
+
+        .service-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            width: 70%;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            clear: both; /* Clears the float from the previous element */
+        }
+
+        .service-card:nth-child(odd) {
+            float: left;
+        }
+
+        .service-card:nth-child(even) {
+            float: right;
+        }
+
+        .service-card img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #0046AD;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #333;
+            clear: both;
+        }
+
+        .service-card .more-info {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .service-card input[type="checkbox"] {
+            display: none;
+        }
+
+        .service-card label {
+            color: #0046AD;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .service-card label:hover {
+            color: #007B8F;
+        }
+
+        .service-card input[type="checkbox"]:checked ~ .more-info {
+            max-height: none;
+        }
+
+        .footer {
+            clear: both;
+            padding: 20px;
+            background-color: #007B8F;
+            color: white;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: opacity 0.3s;
+        }
+
+        .footer a:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="brand">
+            <img src="images/BestBiteLogo2.png" alt="Logo">
+            <span>Student Dentistry</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="images/tooth-1.svg" alt="Service 1">
+                <h3>Comprehensive Dental Care</h3>
+                <p>A complete and comprehensive dental exam will be performed by your dentist at your initial dental visit. At regular check-up exams, your dentist and hygienist will perform the following; </p>
+                <ul>
+                    <li>Examination of diagnostic x-rays (radiographs):essential for detection of decay, tumors, cysts and bone loss. X-rays also help determine tooth and root positions. </li>
+                    <li>Oral cancer screening: check the face, neck, lips, tongue, throat, tissues and gums for any sign of oral cancer</li>
+                    <li>Gum disease evaluation: Check the gums and bone around the teeth for any signs of periodontal disease </li>
+                    <li>Examination of tooth decay: all tooth surfaces will be checked for decay with special dental instruments</li>
+                    <li>Examination of existing restorations: Check current fillings, crowns, etc. </li>
+                </ul>
+                <input type="checkbox" id="more-info-1">
+                <label for="more-info-1">Learn More</label>
+                <div class="more-info">
+                    <h3>Digital X-Rays</h3>
+                    <p>Digital radiography (x-ray) is the latest technology used to take dental x-rays. This technique uses an electronic sensor instead of x-ray film, that captures and stores the digital image on a computer. This image can be instantly viewed and enlarged, helping your dentist and dental hygienist detect problems more easily. Digital x-rays reduce radiation 80-90% compared to the already low exposure of traditional dental x-rays. </p>
+                    <p>Dental x-rays are essential, preventative, diagnostic tools that provide valuable information not visible during a regular dental exam. Dentists and dental hygienists use this information to safely and accurately detect hidden dental abnormalities and complete an accurate treatment plan. Without x-rays, problem areas may go undetected. </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="images/tooth-2.svg" alt="Service 2">
+                <h3>Cosmetic Dentistry</h3>
+                <p>We offer the full range of cosmetic dentistry procedures at our award-winning dental clinic in Mississauga.Our cosmetic dentist services include teeth straightening, teeth whitening, composite bonding, composite or ceramic veneers, smile design, trail smile, implants, gum or lip surgery and much more. </p>
+                <p>There are many dental issues that cosmetic dentistry treatments can fix, with examples being misshapen teeth, crooked teeth and discoloured teeth. Whatever aspect of your teeth you’re not happy with, we’re confident that we can help. For all types of cosmetic dentistry, Mississauga residents trust The BestBite Dentistry to deliver incredible results. Our cosmetic dental surgery offers the following treatments:</p>
+                <input type="checkbox" id="more-info-2">
+                <label for="more-info-2">Learn More</label>
+                <div class="more-info">
+                    <h3>Dental Sealants</h3>
+                    <dl>
+                        <dt>Teeth Whitening</dt>
+                        <dd>Restore your teeth to their natural, white colour, to give yourself a glossy, healthy smile that you’re proud of. Our in-clinic teeth whitening procedure is pain-free, takes only an hour, and delivers immediate results. We can make your existing tooth colour up to 8 shades lighter.</dd>
+                        <dt>Veneers</dt>
+                        <dd>We use ultra-thin shells of enamel-like porcelain, handcrafted by expert ceramists, and permanently bond them to the front of your teeth, to hide all manner of imperfections, like chipped teeth, short teeth, gaps between teeth, and stained teeth.</dd>
+                        <dt>Implants</dt>
+                        <dd>Replace one or more missing teeth with permanently placed, aesthetically pleasing, artificial ones, that look natural and provide long term reliability.Not only do they look great, they feel so too; it’s like having your own tooth back again. We are fully equipped to manage this treatment.</dd>
+                        <dt>Braces</dt>
+                        <dd>Get your teeth straightened to improve their function as well as their appearance. We specialize in using braces – like Invisalign and lingual hidden braces – that are difficult for others to notice. Issues that can be fixed include overcrowding of teeth, gaps between teeth, asymmetrical teeth and protruding teeth. Our cosmetic dentistry clinic can handle this from start to finish.</dd>
+                    </dl>                    
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="images/tooth-3.svg" alt="Service 3">
+                <h3>Root Canal Treatment</h3>
+                <p>Root canal treatment is an often straight forward procedure to relieve dental pain and save your teeth. </p>
+
+                <p>Patients typically need a root canal when there is inflammation or infection in the roots of a tooth. During root canal treatment, an endodontist who specializes in such treatment carefully removes the pulp inside the tooth, cleans, disinfects and shapes the root canals, and places a filling to seal the space.</p>
+                <input type="checkbox" id="more-info-3">
+                <label for="more-info-3">Learn More</label>
+                <div class="more-info">
+                    <h3>How do I know I need root canal treatment?</h3>
+                    <p>During the early stages of infection, pain may be minimal or even non-existent. As the infection develops, you may get pain or swelling.</p>
+                    <p>When there are no symptoms, the infection may only be visible to your dentist on examination.</p>
+                    <p>In these situations, the dentist would normally see a small spot or opening on the gum (called a sinus tract) where the infection has created a path to come out of the bone. Sometimes the dentist can also see a shadow at the bottom of the root on the x-ray.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="images/tooth-3.svg" alt="Service 3">
+                <h3>Emergency Services</h3>
+                <p>Choose a dental clinic that can provide you with the immediate care you need, and one that offers complete oral health services under one roof to help resolve whatever problems you may have.</p>
+
+                <p>When you need emergency dental services, call BestBrite Dentistry right away. We offer same-day service for dental emergencies including</p>
+                <input type="checkbox" id="more-info-3">
+                <label for="more-info-3">Learn More</label>
+                <div class="more-info">
+                    <p>Our experienced dentist and dental assistants are committed to helping you achieve a smile that you can be proud of. Available for all age groups.</p>
+                    <dl>
+                        <dt>Severe Toothache</dt>
+                        <dd>Tooth pain can be caused by various problems; an experienced emergency dentist can determine the exact cause and formulate an effective solution. Visit our dental clinic so we can give you immediate treatment to relieve pain and discomfort.</dd>
+                        <dt>Broken or Chipped Tooth</dt>
+                        <dd>Have you broken or chipped a tooth? Our emergency dentists provide cosmetic dentistry services like cosmetic bonding and porcelain restoration to help you maintain your smile.</dd>
+                        <dt>Broken Dentures</dt>
+                        <dd>If your dentures or partial plate gets damaged, it needs professional repair. Even a small crack or chip could irritate or injure your gums and lead to infection.</dd>
+                        <dt>Lost Dental Filling or Crown</dt>
+                        <dd>As your reliable emergency dentist in London, Ontario, we can fully remedy toothlessness and enhance your chewing and speaking abilities. With dental implants, we can permanently replace missing teeth without impacting neighbouring teeth. We also offer partial and complete dentures.</dd>
+                    </dl>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 BestBite Dentistry. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

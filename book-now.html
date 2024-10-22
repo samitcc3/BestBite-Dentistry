@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document, ensuring proper display of special characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the website is responsive and scales well on mobile devices -->
+    <title>Book Now - BestBite</title> <!-- The title of the page, which appears in the browser tab -->
+    <link href="css/booknow.css" rel="stylesheet" type="text/css"> <!-- Link to the external CSS file for styling the page -->
+	<link href="https://fonts.googleapis.com" rel="preconnect"> <!-- Optimizes loading Google Fonts by preconnecting to the font servers -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"> <!-- Another preconnect to Google's font servers with cross-origin support --> 
+    <link href="images/BestBiteLogo2.png" rel="shortcut icon" type="image/x-icon"> <!-- Sets the favicon, that little icon in the browser tab -->
+    <link href="images/BestBiteLogo2.png" rel="apple-touch-icon"> <!-- Sets the icon for iOS devices when users add the site to their homescreen -->
+	
+	<style>
+        .navbar {
+            display: flex; /* Flexbox to easily space out items */
+            justify-content: space-between; /* Puts space between the brand and the nav links */
+            align-items: center; /* Centers items vertically */
+            padding: 15px 20px; /* Some nice padding to make the navbar look clean */
+            background-color: #007B8F; /* Blue background color for the navbar */
+            color: white; /* White text color for the navbar */
+            position: sticky; /* Makes the navbar stick to the top when scrolling */
+            top: 0; /* Sticks the navbar to the very top */
+            z-index: 1000; /* Ensures the navbar stays above other elements */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow below the navbar for some depth */
+        }
+
+        .navbar .brand {
+            font-size: 24px; /* Larger font for the brand name */
+            font-weight: bold; /* Makes the brand name bold */
+        }
+
+        .navbar .nav-menu {
+            display: flex; /* Flexbox for horizontal nav links */
+            gap: 20px; /* Space between each nav link */
+        }
+
+        .navbar .nav-menu a {
+            color: white; /* White color for the links */
+            text-decoration: none; /* Removes the underline from the links */
+            font-weight: bold; /* Makes the links bold */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        .navbar .nav-menu a:hover {
+            color: #FFD700; /* Turns the links gold when hovered */
+        }
+
+        .footer {
+            text-align: center; /* Centers the text in the footer */
+            padding: 20px; /* Adds some padding inside the footer */
+            background-color: #007B8F; /* Same blue background as the navbar for consistency */
+            color: white; /* White text color in the footer */
+            margin-top: 40px; /* Adds space above the footer */
+        }
+
+        .footer a {
+            color: white; /* White links in the footer */
+            text-decoration: none; /* No underline on the links */
+            margin: 0 10px; /* Some margin to separate the links */
+            transition: opacity 0.3s; /* Smooth transition for opacity on hover */
+        }
+
+        .footer a:hover {
+            opacity: 0.7; /* Makes the links a bit transparent on hover */
+        }
+    </style> <!-- Inline CSS for styling the navbar and footer directly in the HTML file -->
+	
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="brand">
+            <img src="images/BestBiteLogo2.png" alt="BestBite Logo" style="width: 10%; border-radius: 50%;"> <!-- Logo for the dental clinic, with a circular shape -->
+            BestBite Dentistry</div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a> <!-- Link to the homepage -->
+            <a href="about.html">About</a> <!-- Link to the About page -->
+            <a href="services.html">Services</a> <!-- Link to the Services page -->
+            <a href="contact.html">Contact</a> <!-- Link to the Contact page -->
+        </nav>
+    </div> <!-- End of the navigation bar -->
+
+    <!-- Hero section with a welcoming message -->
+    <div class="section-hero gradient">
+        <div class="content small">
+            <div class="block-center">
+                <h1 class="hero-title small">Request Appointment</h1> <!-- Main title for the hero section -->
+                <p>Online booking</p> <!-- Subtitle under the main title -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking form section -->
+    <div class="section-white">
+        <div class="content single-page">
+            <form id="book-now-form" class="form-block-contact w-form">
+                <!-- Name and Phone Number fields -->
+                <div class="grid-2-columns">
+                    <input class="text-field w-input" maxlength="256" name="Name" data-name="Name" placeholder="Name" type="text" required> <!-- Input field for Name -->
+                    <input class="text-field w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="Phone Number" type="tel" required> <!-- Input field for Phone Number -->
+                </div>
+
+                <!-- Email and Preferred Time fields -->
+                <div class="grid-2-columns">
+                    <input class="text-field w-input" maxlength="256" name="Email" data-name="Email" placeholder="Email" type="email" required> <!-- Input field for Email -->
+                    <input class="text-field w-input" maxlength="256" name="Preferred Time" data-name="Preferred Time" placeholder="Preferred Time" type="text" required> <!-- Input field for Preferred Appointment Time -->
+                </div>
+
+                <!-- Service options checklist -->
+                <div class="block-contact">
+                    <h4 class="heading-contact-large">Select Services Needed:</h4> <!-- Heading for service selection -->
+                    <label><input type="checkbox" name="service" value="cleaning"> Cleaning</label><br> <!-- Checkbox for Cleaning service -->
+                    <label><input type="checkbox" name="service" value="diagnosis"> Diagnosis</label><br> <!-- Checkbox for Diagnosis service -->
+                    <label><input type="checkbox" name="service" value="diamond-teeth"> Diamond Teeth</label><br> <!-- Checkbox for Diamond Teeth service -->
+                    <label><input type="checkbox" name="service" value="orthodontics"> Orthodontics</label><br> <!-- Checkbox for Orthodontics service -->
+                    <label><input type="checkbox" name="service" value="other"> Other</label><br> <!-- Checkbox for Other services -->
+                </div>
+
+                <!-- Contact options radio buttons -->
+                <div class="block-contact">
+                    <h4 class="heading-contact-large">Preferred Contact Time:</h4> <!-- Heading for preferred contact time -->
+                    <label><input type="radio" name="contact-time" value="morning"> Morning</label><br> <!-- Radio button for Morning contact time -->
+                    <label><input type="radio" name="contact-time" value="afternoon"> Afternoon</label><br> <!-- Radio button for Afternoon contact time -->
+                    <label><input type="radio" name="contact-time" value="evening"> Evening</label><br> <!-- Radio button for Evening contact time -->
+                </div>
+
+                <!-- More details textarea -->
+                <textarea class="textarea w-input" maxlength="5000" placeholder="More Details" name="details" data-name="Details"></textarea> <!-- Textarea for additional details -->
+
+                <!-- Privacy policy and submit button -->
+                <label><input type="checkbox" name="privacy" required> I agree to the Privacy Policy.</label><br> <!-- Checkbox for agreeing to the privacy policy -->
+                <input type="submit" value="Submit" class="submit-button green w-button"> <!-- Submit button for the form -->
+            </form>
+        </div>
+    </div>
+	
+	<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/WAmCcIBGH_k" frameborder="0" allowfullscreen></iframe> <!-- Embedded YouTube video with a dental services promotion -->
+	</div>
+
+
+    <div class="footer">
+        <p>&copy; 2024 BestBite</p> <!-- Copyright notice -->
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> | <!-- Link to the privacy policy page -->
+            <a href="terms-of-service.html">Terms of Service</a> <!-- Link to the terms of service page -->
+        </p>
+    </div> <!-- End of the footer -->
+
+</body>
+
+</html>

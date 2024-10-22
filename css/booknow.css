@@ -1,0 +1,144 @@
+/* Basic body styling */
+/* Settin' up the font and background for the whole page, goin' for a gradient with cool colors */
+body {
+    font-family: 'Nunito', sans-serif; /* Nunito font keeps it clean and modern */
+    margin: 0; /* No margins, we want the content to hug the edges */
+    padding: 0; /* No padding, clean slate */
+    background: linear-gradient(135deg, #00bfa6 0%, #007bff 100%); /* Gradient for that fresh look */
+    color: #333; /* Dark gray text, good contrast */
+}
+
+/* Styling for the hero section */
+/* Hero section up top, centered and simple */
+.section-hero {
+    text-align: center; /* Center everything in this section */
+    padding: 10px 5px; /* Small padding, just enough to give it some breathing room */
+}
+
+.section-hero .hero-title {
+    font-size: 36px; /* Big bold title, it's the hero after all */
+    margin-bottom: 10px; /* A little space below the title */
+    color: #233044; /* Dark blue-gray text, contrastin' nicely with the background */
+    font-weight: 700; /* Extra bold for emphasis */
+}
+
+.section-hero p {
+    font-size: 18px; /* Subheading, smaller but still readable */
+    color: #233044; /* Matchin' the title color for consistency */
+}
+
+/* Styling for the form section */
+/* The section where the form lives, keepin' it simple */
+.section-white {
+    background-color: transparent; /* Transparent background, let the gradient show through */
+    padding: 5px 5px; /* Tiny padding, don’t need much here */
+}
+
+.form-block-contact {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency, so it pops against the gradient */
+    padding: 40px; /* Generous padding, give the form some space */
+    border-radius: 15px; /* Rounded corners, nice and friendly */
+    max-width: 800px; /* Limit the form width, no need to stretch it too far */
+    margin: 0 auto; /* Center the form on the page */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Drop a shadow for that nice 3D effect */
+}
+
+/* Grid layout for the form inputs */
+/* Two columns for the form, keeps it tidy */
+.grid-2-columns {
+    display: grid; /* Using CSS grid to line things up */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns, easy peasy */
+    gap: 20px; /* Space between the columns, don't wanna crowd things */
+    margin-bottom: 20px; /* A little space below the grid */
+}
+
+/* Styling for the form inputs and text areas */
+/* Keepin' the form fields lookin' consistent and easy to use */
+.text-field,
+.textarea {
+    width: 100%; /* Full width, so everything lines up nice */
+    padding: 15px; /* Decent padding inside the fields, for comfort */
+    border-radius: 8px; /* Smooth rounded corners, again friendly vibes */
+    border: 1px solid #ddd; /* Light border, just enough to separate the fields */
+    background-color: #f9f9f9; /* Light gray background, easy on the eyes */
+    font-size: 16px; /* Standard font size for readability */
+}
+
+.textarea {
+    height: 100px; /* Taller for text areas, gotta have room to write */
+}
+
+/* Heading for sections within the form */
+/* Simple, makes sections stand out a bit */
+.heading-contact-large {
+    font-size: 20px; /* A bit bigger than the form text */
+    font-weight: 600; /* Slightly bold, but not too much */
+    color: #233044; /* Consistent color with other headings */
+    margin-bottom: 10px; /* Space below for readability */
+}
+
+/* Labels for form inputs */
+/* Label style, keepin' it neat */
+label {
+    display: block; /* Labels take up their own line */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #233044; /* Same color as headings, consistency is key */
+    font-weight: 500; /* Slightly bold so they stand out */
+}
+
+/* Adjustments for checkboxes and radio buttons */
+/* Just spacing out those little checkboxes and radios */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px; /* Space between the box and the label */
+}
+
+/* Styling for the submit button */
+/* The big ol' submit button, gotta make it stand out */
+.submit-button {
+    background-color: #00bfa6; /* Teal button, matches the site theme */
+    color: white; /* White text on teal, always a good combo */
+    padding: 15px 30px; /* Padding all around, nice and clicky */
+    border: none; /* No borders, don’t need 'em */
+    border-radius: 8px; /* Rounded corners, friendly and inviting */
+    font-size: 18px; /* Big text, easy to read */
+    cursor: pointer; /* Pointer cursor to make it clear it's clickable */
+    display: block; /* Full width button */
+    width: 100%; /* Stretch the button full width */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+    text-align: center; /* Center the text inside the button */
+}
+
+.submit-button:hover {
+    background-color: #008f7a; /* Darker teal on hover, clear feedback */
+}
+
+/* Embedding YouTube video */
+/* The video section, givin' it some space to breathe */
+.video-container {
+    margin-top: 40px; /* Space above the video */
+    text-align: center; /* Center the video within its container */
+}
+
+.video-container iframe {
+    width: 100%; /* Full width iframe, fills its container */
+    height: 450px; /* Fixed height, decent size for watchin' */
+    border-radius: 10px; /* Rounded corners, stays consistent */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth, makes it pop */
+}
+
+/* Responsive design */
+/* Adjustments for smaller screens, keepin' it usable on mobile */
+@media (max-width: 768px) {
+    .grid-2-columns {
+        grid-template-columns: 1fr; /* Stacks the form fields in one column on small screens */
+    }
+
+    .submit-button {
+        width: 100%; /* Full width button on mobile, make it easy to tap */
+    }
+
+    .video-container iframe {
+        height: 300px; /* Shorter video height on mobile, better fit */
+    }
+}

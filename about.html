@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic stuff here, like charset and viewport settings -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8, so weird symbols don’t show up -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive on mobile devices -->
+    <title>About Us - BestBite</title> <!-- Title of the page that shows up in the browser tab -->
+
+    <!-- Link to our main CSS file for the About page -->
+    <link href="css/about.css" rel="stylesheet" type="text/css"> 
+    <link href="images/BestBiteLogo2.png" rel="shortcut icon" type="image/x-icon"> <!-- Little icon that shows up in the browser tab -->
+    <link href="images/BestBiteLogo2.png" rel="apple-touch-icon"> <!-- Icon for iOS devices when the site is saved to the home screen -->
+
+    <!-- We’re importing some fancy animation libraries here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> <!-- GSAP is awesome for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> <!-- ScrollTrigger is for triggering animations when scrolling -->
+
+    <!-- Inline CSS for the navbar and footer (quick and dirty, but it works) -->
+    <style>
+        .navbar {
+            display: flex; /* Flexbox to make things easier */
+            justify-content: space-between; /* Space between logo and nav links */
+            align-items: center; /* Vertically center everything */
+            padding: 15px 20px; /* Some padding to make it look nice */
+            background-color: #007B8F; /* Blue background for the navbar */
+            color: white; /* White text */
+            position: sticky; /* Sticks to the top when scrolling */
+            top: 0; /* Pinned to the top */
+            z-index: 1000; /* Keep it on top of other elements */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a little shadow for depth */
+        }
+
+        .navbar .brand {
+            font-size: 24px; /* Big font for the brand name */
+            font-weight: bold; /* Make it bold */
+        }
+
+        .navbar .nav-menu {
+            display: flex; /* Flexbox for horizontal menu */
+            gap: 20px; /* Space between the links */
+        }
+
+        .navbar .nav-menu a {
+            color: white; /* White color for the links */
+            text-decoration: none; /* No underlines */
+            font-weight: bold; /* Make the links bold */
+            transition: color 0.3s; /* Smooth color change on hover */
+        }
+
+        .navbar .nav-menu a:hover {
+            color: #FFD700; /* Links turn gold when hovered */
+        }
+
+        .footer {
+            text-align: center; /* Center text in the footer */
+            padding: 20px; /* Some padding for spacing */
+            background-color: #007B8F; /* Same blue as navbar */
+            color: white; /* White text */
+            margin-top: 40px; /* Adds space above the footer */
+        }
+
+        .footer a {
+            color: white; /* White links */
+            text-decoration: none; /* No underlines */
+            margin: 0 10px; /* Space between links */
+            transition: opacity 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .footer a:hover {
+            opacity: 0.7; /* Makes links slightly transparent on hover */
+        }
+    </style> <!-- Done with the inline CSS for now -->
+    
+</head>
+
+<body>
+
+    <!-- Navigation bar at the top -->
+    <div class="navbar">
+        <div class="brand">
+            <img src="images/BestBiteLogo2.png" alt="BestBite Logo" style="width: 10%; border-radius: 50%;"> <!-- Rounded logo -->
+            BestBite Dentistry
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a> <!-- Link to homepage -->
+            <a href="about.html">About</a> <!-- Link to About page -->
+            <a href="services.html">Services</a> <!-- Link to Services page -->
+            <a href="contact.html">Contact</a> <!-- Link to Contact page -->
+        </nav>
+    </div> <!-- End of navbar -->
+
+    <!-- About BestBite section -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About BestBite</h2>
+            <p>BestBite has been serving the community since 2005, providing top-notch dental care with a personal touch. Our mission is to ensure every patient leaves with a smile, not just on their face but in their hearts. We believe in the power of a healthy, beautiful smile and work tirelessly to bring this to each and every one of our patients.</p>
+        </div>
+    </section>
+
+    <!-- Team section with clickable cards -->
+    <div class="team-cards">
+        <div class="team-card" data-id="1">
+            <img src="images/team1.webp" alt="Dr. Emily Bunny"> <!-- Picture of Dr. Emily Bunny -->
+            <h3>Dr. Emily Bunny</h3>
+            <p>Specialist in Orthodontics</p> <!-- Brief description of the specialty -->
+        </div>
+        <div class="team-card" data-id="2">
+            <img src="images/team2.webp" alt="Dr. Ed Kristofer"> <!-- Picture of Dr. Ed Kristofer -->
+            <h3>Dr. Ed Kristofer</h3>
+            <p>Expert in Cosmetic Dentistry</p> <!-- Brief description of the specialty -->
+        </div>
+        <div class="team-card" data-id="3">
+            <img src="images/team3.webp" alt="Dr. Hermes Castano"> <!-- Picture of Dr. Hermes Castano -->
+            <h3>Dr. Hermes Castano "Sam"</h3>
+            <p>Implantology Specialist</p> <!-- Brief description of the specialty -->
+        </div>
+    </div>
+
+    <!-- Pop-up modals for each team member’s details -->
+    <!-- Dr. Emily Bunny’s modal -->
+    <div id="detail-1" class="modal team-details" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Close button for the modal -->
+            <img src="images/team1.webp" alt="Dr. Emily Bunny" class="modal-image"> <!-- Another pic of Dr. Emily Bunny -->
+            <h3>Dr. Emily Bunny</h3>
+            <p>Specialist in Orthodontics with over 15 years of experience.</p> <!-- More detailed description -->
+            <a href="https://www.linkedin.com/in/samitcc3/" target="_blank">
+                <img src="images/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon"> <!-- LinkedIn icon and link -->
+            </a>
+            <a href="book-now.html" class="button w-button">Book an Appointment</a> <!-- Button to book an appointment -->
+        </div>
+    </div>
+
+    <!-- Dr. Ed Kristofer’s modal -->
+    <div id="detail-2" class="modal team-details" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Close button for the modal -->
+            <img src="images/team2.webp" alt="Dr. Ed Kristofer" class="modal-image"> <!-- Another pic of Dr. Ed Kristofer -->
+            <h3>Dr. Ed Kristofer</h3>
+            <p>Expert in Cosmetic Dentistry, known for creating beautiful smiles.</p> <!-- More detailed description -->
+            <a href="https://www.linkedin.com/in/edsuelila/" target="_blank">
+                <img src="images/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon"> <!-- LinkedIn icon and link -->
+            </a>
+            <a href="book-now.html" class="button w-button">Book an Appointment</a> <!-- Button to book an appointment -->
+        </div>
+    </div>
+
+    <!-- Dr. Hermes Castano’s modal -->
+    <div id="detail-3" class="modal team-details" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Close button for the modal -->
+            <img src="images/team3.webp" alt="Dr. Hermes Castano" class="modal-image"> <!-- Another pic of Dr. Hermes Castano -->
+            <h3>Dr. Hermes Castano "Sam"</h3>
+            <p>Implantology Specialist with a passion for restoring confidence.</p> <!-- More detailed description -->
+            <a href="https://www.linkedin.com/in/samitcc3/" target="_blank">
+                <img src="images/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon"> <!-- LinkedIn icon and link -->
+            </a>
+            <a href="book-now.html" class="button w-button">Book an Appointment</a> <!-- Button to book an appointment -->
+        </div>
+    </div>
+
+    <!-- Our Journey section with timeline -->
+    <section class="curious-section">
+        <div class="container">
+            <h2>Our Journey</h2>
+            <div class="timeline">
+                <!-- Each div here represents an event on the timeline -->
+                <div class="timeline-item" data-year="1990">
+                    <div class="timeline-content">
+                        <h3>BestBite Founded</h3>
+                        <p>BestBite was founded in 1990 with a mission to provide top-quality dental care.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="1995">
+                    <div class="timeline-content">
+                        <h3>First Clinic Opens</h3>
+                        <p>The first BestBite clinic opened in Mississauga, offering state-of-the-art dental services.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2005">
+                    <div class="timeline-content">
+                        <h3>Expansion to Multiple Locations</h3>
+                        <p>By 2005, BestBite had expanded to several locations across Canada.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-content">
+                        <h3>Modernization</h3>
+                        <p>BestBite modernized its clinics with the latest technology to enhance patient care.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-content">
+                        <h3>Today</h3>
+                        <p>BestBite continues to be a leader in dental care, with a focus on innovation and patient satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Now button section -->
+    <section class="book-now-section">
+        <div class="container">
+            <a href="book-now.html" class="button w-button">Book an Appointment</a> <!-- Another button for booking appointments -->
+        </div>
+    </section>
+
+    <!-- Footer of the page -->
+    <div class="footer">
+        <p>&copy; 2024 BestBite</p> <!-- Copyright notice -->
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> | <!-- Link to privacy policy -->
+            <a href="terms-of-service.html">Terms of Service</a> <!-- Link to terms of service -->
+        </p>
+    </div>
+
+    <!-- Script for the timeline animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger); // Registering the ScrollTrigger plugin with GSAP
+
+        const timelineItems = document.querySelectorAll('.timeline-item'); // Select all timeline items
+
+        // Loop through each timeline item and animate it when it enters the viewport
+        timelineItems.forEach(item => {
+            gsap.fromTo(item.querySelector('.timeline-content'), 
+                { y: 50, opacity: 0 }, // Start position (50px down and invisible)
+                {
+                    y: 0, opacity: 1, // End position (0px and fully visible)
+                    scrollTrigger: {
+                        trigger: item, // Trigger animation when this item enters the viewport
+                        start: "top 80%", // When the top of the item is 80% from the top of the viewport
+                        end: "bottom 20%", // When the bottom of the item is 20% from the bottom of the viewport
+                        toggleActions: "play none none reverse", // Play animation on enter, reverse on leave
+                        onEnter: () => item.classList.add('is-visible'), // Add visible class when item enters
+                        onLeaveBack: () => item.classList.remove('is-visible') // Remove class when item leaves going back
+                    }
+                }
+            );
+        });
+    </script>
+
+    <!-- Script to handle the pop-up modals for team members -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () { 
+            // When the page is fully loaded
+            const teamCards = document.querySelectorAll('.team-card'); // Select all the team cards
+            const teamDetails = document.querySelectorAll('.team-details'); // Select all the modals
+
+            // Ensure all modals are hidden when the page loads
+            teamDetails.forEach(detail => detail.style.display = 'none');
+
+            // Add click event to each team card
+            teamCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Hide all modals
+                    teamDetails.forEach(detail => detail.style.display = 'none');
+
+                    // Show the modal corresponding to the clicked card
+                    const detailId = card.getAttribute('data-id');
+                    document.getElementById('detail-' + detailId).style.display = 'flex'; // Set display to flex so it shows up properly
+                });
+            });
+
+            // Close the modal when clicking on the close button
+            document.querySelectorAll('.close').forEach(closeButton => {
+                closeButton.addEventListener('click', () => {
+                    closeButton.closest('.modal').style.display = 'none'; // Hide the current modal
+                });
+            });
+
+            // Close the modal when clicking outside of the modal content
+            window.addEventListener('click', function (event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none'; // Hide the modal if clicked outside
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

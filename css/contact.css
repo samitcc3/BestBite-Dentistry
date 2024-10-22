@@ -1,0 +1,270 @@
+/* Basic styling for the whole body */
+body {
+    /* 'Nunito' is a Google font used for the main text throughout the page */
+    font-family: 'Nunito', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light gray background for a clean look */
+    color: #333; /* Dark gray text color for readability */
+}
+
+/* Styling for the rest of the content */
+.section-hero {
+    background: linear-gradient(135deg, #00bfa6 0%, #007bff 100%); /* Gradient background */
+    padding: 80px 20px; /* Adds padding inside the section */
+    text-align: center; /* Centers the text */
+    color: #fff; /* White text color */
+}
+
+.section-hero .hero-title {
+    font-size: 36px; /* Large font size for the hero title */
+    margin: 0; /* Removes default margin */
+}
+
+.section-white {
+    padding: 50px 20px; /* Adds padding inside the section */
+    background-color: #fff; /* White background for clean look */
+}
+
+.grid-3-columns {
+    display: grid; /* Grid layout for three columns */
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 20px; /* Adds space between columns */
+}
+
+.block-contact {
+    text-align: center; /* Centers text inside each block */
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 20px; /* Adds padding inside the block */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.block-contact .heading-contact-large {
+    font-size: 22px; /* Medium-large font size */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+.block-contact .paragraph-contact {
+    font-size: 16px; /* Regular font size */
+    color: #555; /* Medium gray text color */
+}
+
+.grid-2-columns {
+    display: grid; /* Grid layout for two columns */
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    gap: 30px; /* Adds space between columns */
+    align-items: center; /* Aligns items vertically centered */
+    margin-top: 50px; /* Adds space above the grid */
+}
+
+.block-map iframe {
+    width: 100%; /* Full width iframe */
+    border-radius: 10px; /* Rounded corners for the map */
+}
+
+.block-right .title {
+    font-size: 28px; /* Large font size for titles */
+    color: #333; /* Dark gray text color */
+}
+
+.block-right .subtitle {
+    font-size: 18px; /* Medium font size for subtitles */
+    color: #00bfa6; /* Teal color for subtitles */
+    margin-bottom: 20px; /* Adds space below the subtitle */
+}
+
+.form-block-contact {
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 30px; /* Adds padding inside the form block */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.text-field,
+.textarea {
+    width: 100%; /* Full width input and textarea */
+    padding: 10px; /* Adds padding inside the fields */
+    margin-bottom: 20px; /* Adds space below the fields */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.submit-button {
+    background-color: #00bfa6; /* Teal background for the button */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Adds padding inside the button */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.submit-button:hover {
+    background-color: #008f7a; /* Darker teal for hover effect */
+}
+
+.success-message,
+.error-message {
+    display: none; /* Hidden by default */
+    padding: 10px; /* Adds padding inside the message box */
+    margin-top: 20px; /* Adds space above the messages */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: 600; /* Bolder text */
+}
+
+.success-message {
+    background-color: #00bfa6; /* Teal background for success message */
+    color: #fff; /* White text color */
+}
+
+.error-message {
+    background-color: #ff6b6b; /* Red background for error message */
+    color: #fff; /* White text color */
+}
+
+/* Footer Section */
+.section-footer-top {
+    background-color: #007bff; /* Blue background for the footer */
+    color: #fff; /* White text color */
+    padding: 50px 20px; /* Adds padding inside the footer section */
+}
+
+.footer-top {
+    display: flex; /* Flexbox for footer layout */
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center; /* Aligns items vertically centered */
+    flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+    text-align: left; /* Aligns text to the left */
+}
+
+.block-footer-top {
+    display: flex; /* Flexbox for the footer blocks */
+    align-items: center; /* Aligns items vertically centered */
+    gap: 30px; /* Adds space between items */
+    flex-wrap: wrap; /* Allows items to wrap to next line if needed */
+    justify-content: center; /* Centers the items */
+}
+
+.footer-top .button {
+    background-color: #00bfa6; /* Teal background for the button */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Adds padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline on the button */
+    font-weight: 600; /* Bold text */
+    font-size: 18px; /* Larger font size */
+}
+
+.footer-top .button:hover {
+    background-color: #008f7a; /* Darker teal for hover effect */
+}
+
+/* Adjusted style for the contact information to ensure proper layout */
+.contact-footer h6 {
+    font-size: 16px; /* Adjusted font size for better consistency */
+    font-weight: 600; /* Bold text */
+    margin: 0; /* Removes default margin */
+    line-height: 1.4; /* Adjusts line height */
+}
+
+.contact-footer h6.white {
+    color: #fff; /* White text color */
+}
+
+/* Style for the text "New patients welcome..." */
+.block-footer-top h6.heading-contact-footer {
+    font-size: 20px; /* Increased font size for better visibility */
+    font-weight: 700; /* Bold text */
+    margin: 0; /* Removes default margin */
+    line-height: 1.5; /* Adjusts line height */
+    text-align: center; /* Centers the text */
+}
+
+/* Blockquote Style */
+.block-quote {
+    font-size: 24px; /* Large font size for blockquote */
+    text-align: center; /* Centers the blockquote text */
+    padding: 40px 20px; /* Adds padding inside the blockquote */
+    background-color: #f1f1f1; /* Light gray background */
+    margin-top: 50px; /* Adds space above the blockquote */
+    border-radius: 10px; /* Rounded corners */
+    color: #333; /* Dark gray text color */
+    font-style: italic; /* Italic text for the quote */
+}
+
+/* Responsive Styles for different screen sizes */
+@media (max-width: 768px) {
+    /* Adjusting the navbar for small screens */
+    .navbar {
+        flex-direction: column; /* Stacks navbar items vertically */
+        padding: 10px 20px; /* Adjusts padding for smaller screens */
+    }
+
+    .navbar .block-navbar {
+        flex-direction: column; /* Stacks navbar items vertically */
+        align-items: flex-start; /* Aligns items to the start */
+    }
+
+    .navbar .brand {
+        margin-bottom: 15px; /* Adds space below the logo */
+    }
+
+    .navbar .menu {
+        width: 100%; /* Full width for the menu */
+    }
+
+    .navbar .nav-menu {
+        flex-direction: column; /* Stacks menu items vertically */
+        width: 100%; /* Full width for the menu */
+        display: none; /* Hidden by default */
+        margin-left: 0; /* Removes left margin */
+    }
+
+    .navbar .menu-button {
+        display: block; /* Displays the menu button for mobile */
+        align-self: flex-end; /* Aligns the button to the right */
+    }
+
+    .navbar .menu-button.active + .nav-menu {
+        display: flex; /* Displays the menu on button click */
+    }
+
+    /* Adjusting the columns to a single column on small screens */
+    .grid-3-columns {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Adjusts gap between items */
+    }
+
+    .grid-2-columns {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px; /* Adjusts gap between items */
+    }
+
+    .footer-top {
+        flex-direction: column; /* Stacks footer items vertically */
+        text-align: center; /* Centers the text */
+    }
+
+    .block-footer-top {
+        justify-content: center; /* Centers footer blocks */
+        margin-bottom: 15px; /* Adds space below footer blocks */
+    }
+
+    .footer-top .button {
+        margin-top: 15px; /* Adds space above the button */
+    }
+
+    .form-block-contact {
+        padding: 20px; /* Adjusts padding inside the form block */
+    }
+
+    .text-field,
+    .textarea {
+        margin-bottom: 15px; /* Adjusts margin for form fields */
+    }
+
+    .block-quote {
+        font-size: 20px; /* Smaller font size for blockquote */
+        padding: 30px 20px; /* Adjusts padding inside the blockquote */
+    }
+}

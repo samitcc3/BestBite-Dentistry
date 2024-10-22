@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8"> <!-- sets the character encoding to UTF-8, so all text is displayed correctly -->
+      <title>Contact - BestBite - Mississauga</title> <!-- The title of the page, appears in the browser tab -->
+      <meta content="Visit BestBite Dentistry in Mississauga for top-quality dental care. New patients are welcome! Book your appointment today." name="description"> <!-- Short description for search engines, tells what the page is about -->
+      <meta content="width=device-width, initial-scale=1" name="viewport"> <!-- makes sure the page is responsive, looks good on mobile and desktop -->
+      <link href="css/contact.css" rel="stylesheet" type="text/css"> <!-- Links to the external CSS file where all the styles are defined -->
+      <link href="https://fonts.googleapis.com" rel="preconnect"> <!-- Optimizes loading Google Fonts by preconnecting to the font servers -->
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"> <!-- Another preconnect to Google's font servers with cross-origin support -->
+      <link href="images/BestBiteLogo2.png" rel="shortcut icon" type="image/x-icon"> <!-- Sets the favicon, that little icon in the browser tab -->
+      <link href="images/BestBiteLogo2.png" rel="apple-touch-icon"> <!-- Sets the icon for iOS devices when users add the site to their homescreen -->
+	  
+	  <style>
+        .navbar {
+            display: flex; /* Flexbox to easily space out items */
+            justify-content: space-between; /* Puts space between the brand and the nav links */
+            align-items: center; /* Centers items vertically */
+            padding: 15px 20px; /* Some nice padding to make the navbar look clean */
+            background-color: #007B8F; /* Blue background color for the navbar */
+            color: white; /* White text color for the navbar */
+            position: sticky; /* Makes the navbar stick to the top when scrolling */
+            top: 0; /* Sticks the navbar to the very top */
+            z-index: 1000; /* Ensures the navbar stays above other elements */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow below the navbar for some depth */
+        }
+
+        .navbar .brand {
+            font-size: 24px; /* Larger font for the brand name */
+            font-weight: bold; /* Makes the brand name bold */
+        }
+
+        .navbar .nav-menu {
+            display: flex; /* Flexbox for horizontal nav links */
+            gap: 20px; /* Space between each nav link */
+        }
+
+        .navbar .nav-menu a {
+            color: white; /* White color for the links */
+            text-decoration: none; /* Removes the underline from the links */
+            font-weight: bold; /* Makes the links bold */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        .navbar .nav-menu a:hover {
+            color: #FFD700; /* Turns the links gold when hovered */
+        }
+
+        .footer {
+            text-align: center; /* Centers the text in the footer */
+            padding: 20px; /* Adds some padding inside the footer */
+            background-color: #007B8F; /* Same blue background as the navbar for consistency */
+            color: white; /* White text color in the footer */
+            margin-top: 40px; /* Adds space above the footer */
+        }
+
+        .footer a {
+            color: white; /* White links in the footer */
+            text-decoration: none; /* No underline on the links */
+            margin: 0 10px; /* Some margin to separate the links */
+            transition: opacity 0.3s; /* Smooth transition for opacity on hover */
+        }
+
+        .footer a:hover {
+            opacity: 0.7; /* Makes the links a bit transparent on hover */
+        }
+    </style>
+	  
+</head>
+
+
+   <body>
+		
+		<div class="navbar">
+			<div class="brand">
+				<img src="images/BestBiteLogo2.png" alt="BestBite Logo" style="width: 10%; border-radius: 50%;">
+				BestBite Dentistry</div>
+			<nav class="nav-menu">
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="services.html">Services</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</div>
+
+      <!-- Hero section with a welcoming message -->
+      <div class="section-hero gradient">
+         <div class="content small">
+            <!-- Centralized title for the hero section -->
+            <div class="block-center">
+               <h1 class="hero-title small">Contact Us</h1>
+            </div>
+         </div>
+      </div>
+
+      <!-- Main content area with contact information -->
+      <div class="section-white">
+         <div class="content single-page">
+            <div class="w-layout-grid grid-3-columns margin">
+               <div class="block-contact">
+                  <div class="block-icon-contact">
+                     <img src="images/mail.svg" alt="" class="icon-contact">
+                  </div>
+                  <h4 class="heading-contact-large">info@bestbite.com</h4>
+                  <p class="paragraph-contact">Reach out to us through this form or email if you have any feedback.</p>
+               </div>
+               <!-- Address block for the dental clinic -->
+               <div class="block-contact">
+                  <div class="block-icon-contact">
+                     <img src="images/marker.svg" alt="" class="icon-contact">
+                  </div>
+                  <h4 class="heading-contact-large">123 Best Bite Ave, Mississauga, ON L5V 0XX</h4>
+                  <p class="paragraph-contact">
+                     <span class="semi-bold">Monday - Friday:</span> 9:00am - 5:00pm<br>
+                     <span class="semi-bold">Saturday:</span> 11:00am - 4:00pm<br>
+                     <span class="semi-bold">Sunday:</span> closed
+                  </p>
+               </div>
+               <!-- Phone number block for the dental clinic -->
+               <div class="block-contact">
+                  <div class="block-icon-contact">
+                     <img src="images/phone.svg" alt="" class="icon-contact">
+                  </div>
+                  <h4 class="heading-contact-large">(905) 555-1234</h4>
+                  <p class="paragraph-contact">We're here to support your dental health and wellness.</p>
+               </div>
+            </div>
+         </div>
+
+         <!-- Section with map and contact form -->
+         <div class="content">
+            <div class="w-layout-grid grid-2-columns">
+               <div class="block-map">
+                  <!-- Embedded Google Map showing the clinic's location -->
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11551.988111745899!2d-79.6745315!3d43.6274208!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b409fb8a947f9%3A0x418640e93fdafd13!2sLambton%20College!5e0!3m2!1ses-419!2sca!4v1723602814268!5m2!1ses-419!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+               <div class="block-right">
+                  <!-- Subtitle and main title for the contact form -->
+                  <div class="subtitle green">Message Us</div>
+                  <h2 class="title">How can we assist you today?</h2>
+                  <p>Complete the form below, and we'll reach out during business hours.</p>
+                  <div class="form-block-contact w-form">
+                     <!-- Contact form for inquiries -->
+                     <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form" method="get" class="form">
+                        <!-- Input field for name -->
+                        <input class="text-field w-input" maxlength="256" name="Name" data-name="Name" placeholder="Your Name" type="text" id="Name">
+                        <!-- Input field for email -->
+                        <input class="text-field w-input" maxlength="256" name="E-mail" data-name="E-mail" placeholder="Your Email" type="email" id="E-mail" required="">
+                        <!-- Text area for the message -->
+                        <textarea placeholder="Your Message" maxlength="5000" id="Message" name="Message" data-name="Message" class="textarea w-input"></textarea>
+                        <!-- Submit button for the form -->
+                        <input type="submit" data-wait="Please wait..." class="submit-button green w-button" value="Send Message">
+                     </form>
+                     <!-- Message displayed after successful submission -->
+                     <div class="success-message w-form-done">
+                        <div class="text-success">Thank you! We've received your message!</div>
+                     </div>
+                     <!-- Message displayed if submission fails -->
+                     <div class="error-message w-form-fail">
+                        <div class="text-error">Oops! Something went wrong while submitting the form.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Inspirational quote related to dental care -->
+         <blockquote class="block-quote">"Smile with confidence – it's the best curve on your body!"</blockquote>
+      </div>
+
+      <!-- Footer section with additional contact details -->
+      <div class="section-footer-top">
+         <div class="content small">
+            <div class="footer-top">
+               <!-- Footer contact info -->
+               <div class="block-footer-top">
+                  <div class="contact-footer">
+                     <div class="circle-contact">
+                        <!-- Icon for phone number in the footer -->
+                        <img src="images/phone.svg" alt="" class="icon-contact">
+                     </div>
+                     <h6 class="heading-contact white">Call Us Today<br>(905) 555-1234</h6>
+                  </div>
+                  <div class="contact-footer">
+                     <div class="circle-contact">
+                        <!-- Icon for location in the footer -->
+                        <img src="images/marker.svg" alt="" class="icon-contact">
+                     </div>
+                     <h6 class="heading-contact white">123 Best Bite Ave, Mississauga, ON<br>L5V 0XX</h6>
+                  </div>
+               </div>
+               <div class="block-footer-top">
+                  <h6 class="heading-contact-footer">New patients welcome – come experience the Best Bite difference!</h6>
+                  <!-- Button to book an appointment -->
+                  <a href="book-now.html" class="button w-button">Book an Appointment</a>
+
+               </div>
+            </div>
+         </div>
+      </div>
+	  
+	  <div class="footer">
+        <p>&copy; 2024 BestBite</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="terms-of-service.html">Terms of Service</a>
+        </p>
+     </div>
+	  
+   </body>
+</html>
+
