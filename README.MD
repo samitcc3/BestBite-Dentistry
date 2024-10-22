@@ -177,11 +177,8 @@ _Note: Figma files are not included in this repository._
 
 **Cloning the Repository**
 
-bash
-
-Copy code
-
-git clone <https://github.com/yourusername/bestbite-dentistry.git>
+  ```bash
+  git clone <https://github.com/yourusername/bestbite-dentistry.git>
 
 Alternatively, download the repository as a ZIP file.
 
